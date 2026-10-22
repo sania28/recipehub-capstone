@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101014" />
+  <meta name="description" content="Discover delicious recipes with RecipeHub, your premium recipe discovery experience." />
+  <title>RecipeHub — Discover Something Delicious</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#" aria-label="RecipeHub home">
+      <span class="brand-icon">✳</span>
+      Recipe<span>Hub</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a>
+      <a href="#categories">Categories</a>
+      <a href="#favorites">My Favorites</a>
+    </nav>
+    <button class="profile-button" id="loginBtn" type="button">Sign In <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR DAILY DOSE OF DELICIOUS</div>
+        <h1>Find your next<br />favorite <span>flavor.</span></h1>
+        <p>Explore inspiring recipes, discover new ingredients, and bring a little magic to your kitchen.</p>
+        <a class="primary-button" href="#recipes">Explore Recipes <span>↘</span></a>
+        <div class="hero-stats">
+          <div><strong>Fresh</strong><span>Ideas daily</span></div>
+          <div class="stat-divider"></div>
+          <div><strong>Easy</strong><span>Step-by-step</span></div>
+          <div class="stat-divider"></div>
+          <div><strong>Made</strong><span>For food lovers</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Featured recipe">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-image-card">
+          <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85" alt="Fresh pasta with tomatoes and herbs" />
+        </div>
+        <div class="floating-tag tag-top">✦ Made with love</div>
+        <div class="floating-tag tag-bottom"><span>★★★★★</span><br />A little taste of joy</div>
+        <div class="floating-leaf">✳</div>
+      </div>
+    </section>
+
+    <section class="search-section" aria-label="Search recipes">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search recipes, ingredients..." aria-label="Search recipes" />
+        <button id="searchBtn" type="button">Search <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="category-section" id="categories">
+      <div class="section-heading">
+        <div><span class="eyebrow">EXPLORE BY MOOD</span><h2>What's cooking?</h2></div>
+        <p>Something delicious is waiting for you.</p>
+      </div>
+      <div class="category-list" id="categoryList">
+        <button class="category-chip selected" data-category="All" type="button">✳ All Recipes</button>
+        <button class="category-chip" data-category="Breakfast" type="button">☀ Breakfast</button>
+        <button class="category-chip" data-category="Lunch" type="button">🥗 Lunch</button>
+        <button class="category-chip" data-category="Dinner" type="button">🍝 Dinner</button>
+        <button class="category-chip" data-category="Dessert" type="button">🍰 Dessert</button>
+      </div>
+    </section>
+
+    <section class="recipes-section" id="recipes">
+      <div class="section-heading">
+        <div><span class="eyebrow">HANDPICKED FOR YOU</span><h2>Today's inspiration<span class="accent-dot">.</span></h2></div>
+        <select id="sortSelect" aria-label="Sort recipes">
+          <option value="default">Recommended</option>
+          <option value="az">Name: A–Z</option>
+          <option value="time">Quickest first</option>
+        </select>
+      </div>
+      <div class="recipe-grid" id="recipeGrid">
+        <div class="loading-card">Preparing something delicious...</div>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>No recipes found. Try another search!</p>
+    </section>
+
+    <section class="newsletter">
+      <div><span class="eyebrow">A LITTLE SOMETHING EXTRA</span><h2>Good food. Good mood.</h2><p>Save your favorites and make every meal a little more special.</p></div>
+      <a href="#recipes" class="primary-button">Find Your Flavor <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#"><span class="brand-icon">✳</span> Recipe<span>Hub</span></a>
+    <p>Made for the love of good food. © 2026 RecipeHub</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
